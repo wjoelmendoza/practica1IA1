@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("inicio.html")
+    return render_template("inicio.html",autor1 = {"nombre":"Walter","apellido":"Mendoza"},autor2 = {"nombre":"Byron","apellido":"Lopez"})
 
 @app.route('/analizar', methods=['POST'])
 def analizar():
