@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practica1 IA1</title>
+  </head>
+  <body>
+    <h1>Predictor de Notas MC2A</h1>
+    <form action="/analizar" method="POST" enctype="multipart/form-data">
+      
+      <input type="file" name="file" id="file"/><br/><br/>
+      <strong>Selección el criterio de finalización</strong><br/>
+      <label>
+      <input name="criterio" type="radio" value="1"/>
+        Opción 1
+      </label>
+      <label>
+      <input name="criterio" type="radio" value="2"/>
+        Opción 2
+      </label>
+      <label>
+      <input name="criterio" type="radio" value="3"/>
+        Opción 3
+      </label>
+      <br/>
+      <br/>
+      <strong>Modo de selección del padre</strong><br/>
+      <label>
+      <input name="criteriop" type="radio" value="1"/>
+        Opción 1
+      </label>
+      <label>
+      <input name="criteriop" type="radio" value="2"/>
+        Opción 2
+      </label>
+      <label>
+      <input name="criteriop" type="radio" value="3"/>
+        Opción 3
+      </label>
+      
+      <br/>
+      <br/>
+      <input type="submit" value="Analizar"/>
+      <input type="reset" value="Cancelar"/>
+    </form>
+  </body>
+</html>
