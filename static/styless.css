@@ -1,4 +1,9 @@
 
+* { margin:0; padding:0; }
+body { font-family: sans-serif;} 
+#content { margin: 50px; } 
+a { text-decoration: none; }
+
 .expandable {
   background: #fff;
   overflow: hidden;
