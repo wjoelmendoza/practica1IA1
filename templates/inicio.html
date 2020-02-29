@@ -26,41 +26,45 @@
           
           <label>
           <input name="criterio" type="radio" value="1"/>
-            Opción 1
+          Maximo numero de generaciones
+          <input name="valcriterio1" type="number" value="0" class="inputnumeric"/>
           </label>
+          <br/>
           <label>
           <input name="criterio" type="radio" value="2"/>
-            Opción 2
+          El mejor fitness de la poblacion
+          <input name="valcriterio2" type="number" value="0" class="inputnumeric"/>
           </label>
+          <br/>
           <label>
           <input name="criterio" type="radio" value="3"/>
-            Opción 3
+          El fitness promedio de la poblacion
+          <input name="valcriterio3" type="number" value="0" class="inputnumeric"/>
           </label>
 
         </div>
-        <br/>
-        <br/>
+        
+        
         <div type="menu" class="accordion">Modo de selección del padre</div>
         <div class="panel">
           
           <label>
           <input name="criteriop" type="radio" value="1"/>
-            Opción 1
+            Torneos, escojiendo el de mejor fitness
           </label>
+          <br/>
           <label>
           <input name="criteriop" type="radio" value="2"/>
-            Opción 2
+            Los mejores padres(mejor fitness)
           </label>
+          <br/>
           <label>
           <input name="criteriop" type="radio" value="3"/>
-            Opción 3
+            Aleatorios
           </label>
 
         </div>  
-        
-        
-        <br/>
-        <br/>
+                
         <input type="submit" value="Analizar"/>
         <input type="reset" value="Cancelar"/>
       </form>
