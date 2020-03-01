@@ -10,8 +10,10 @@ def index():
 @app.route('/analizar', methods=['POST'])
 def analizar():
     f = request.files['file']
+    rec = './temporales/'+f.filename
+    f.save(rec)
     print(request.files)
-    print(f.mimetype)
+    print(f.filename)
     return "OK"
 
 if __name__ == "__main__":
