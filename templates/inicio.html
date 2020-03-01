@@ -2,45 +2,88 @@
 <html>
   <head>
     <title>Practica1 IA1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}"/>
+
   </head>
   <body>
-    <h1>Predictor de Notas MC2A</h1>
-    <form action="/analizar" method="POST" enctype="multipart/form-data">
+
+    <div class="container" style="text-align: center;">
+      <h1>Predictor de Notas MC2AA</h1>
+    </div>
+
+
+
+
+    <div class="container">
       
-      <input type="file" name="file" id="file"/><br/><br/>
-      <strong>Selección el criterio de finalización</strong><br/>
-      <label>
-      <input name="criterio" type="radio" value="1"/>
-        Opción 1
-      </label>
-      <label>
-      <input name="criterio" type="radio" value="2"/>
-        Opción 2
-      </label>
-      <label>
-      <input name="criterio" type="radio" value="3"/>
-        Opción 3
-      </label>
-      <br/>
-      <br/>
-      <strong>Modo de selección del padre</strong><br/>
-      <label>
-      <input name="criteriop" type="radio" value="1"/>
-        Opción 1
-      </label>
-      <label>
-      <input name="criteriop" type="radio" value="2"/>
-        Opción 2
-      </label>
-      <label>
-      <input name="criteriop" type="radio" value="3"/>
-        Opción 3
-      </label>
-      
-      <br/>
-      <br/>
-      <input type="submit" value="Analizar"/>
-      <input type="reset" value="Cancelar"/>
-    </form>
-  </body>
+
+      <form action="/analizar" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="file" id="file"/><br/><br/>
+        <div type="menu" class="accordion">Selección el criterio de finalización</div>
+        <div class="panel">
+
+          <label>
+          <input name="criterio" type="radio" value="1"/>
+          Maximo numero de generaciones
+          <input name="valcriterio1" type="number" value="0" class="inputnumeric"/>
+          </label>
+          <br/>
+          <label>
+          <input name="criterio" type="radio" value="2"/>
+          El mejor fitness de la poblacion
+          <input name="valcriterio2" type="number" value="0" class="inputnumeric"/>
+          </label>
+          <br/>
+          <label>
+          <input name="criterio" type="radio" value="3"/>
+          El fitness promedio de la poblacion
+          <input name="valcriterio3" type="number" value="0" class="inputnumeric"/>
+          </label>
+
+        </div>
+
+
+        <div type="menu" class="accordion">Modo de selección del padre</div>
+        <div class="panel">
+
+          <label>
+          <input name="criteriop" type="radio" value="1"/>
+            Torneos, escojiendo el de mejor fitness
+          </label>
+          <br/>
+          <label>
+          <input name="criteriop" type="radio" value="2"/>
+            Los mejores padres(mejor fitness)
+          </label>
+          <br/>
+          <label>
+          <input name="criteriop" type="radio" value="3"/>
+            Aleatorios
+          </label>
+
+        </div>
+
+        <input type="submit" value="Analizar"/>
+        <input type="reset" value="Cancelar"/>
+      </form>
+    </div>
+    <footer class="footer bg-dark rounded-top text-center">
+      <div class="container py-2">
+        <p class="text-white my-2">
+          &copy; {{autor1.nombre + '' + autor1.apellido}} {{autor2.nombre + '' + autor2.apellido}}
+        </p>
+
+      </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='code.js') }}" ></script>
+
+    </body>
 </html>

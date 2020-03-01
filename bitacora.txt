@@ -1,0 +1,8 @@
+Fecha de ejecución: 2020-02-29
+Hora de ejecución: 18:10:47.812848
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
+Método de selección: Torneos, escojiendo el de mejor fitness
+No. Generaciones: 0
+Mejor solucion: 0
+------------------------------
