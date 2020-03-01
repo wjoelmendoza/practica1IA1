@@ -12,11 +12,7 @@ def analizar():
     f = request.files['file']
     rec = './temporales/'+f.filename
     f.save(rec)
-    print(request.files)
-    print(f.filename)
-    print(f.mimetype)
-    print(type(f))
-    f.save('./'+f.filename)
+
     params = request.form
     #Vamos a inicializar con los datos del form las variables que usa el algortirmo(variables en utils.py)
     #Tenemos que seleccionar el valor segun el criterio de finalizacion seleccionado
