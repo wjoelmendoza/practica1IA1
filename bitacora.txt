@@ -1,38 +1,6 @@
 Fecha de ejecución: 2020-02-29
-Hora de ejecución: 17:38:32.301605
-Nombre del documento de datos utilizado: alv
-Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
-Método de selección: default
-No. Generaciones: 0
-Mejor solucion: 0
-------------------------------
-Fecha de ejecución: 2020-02-29
-Hora de ejecución: 17:40:33.015557
-Nombre del documento de datos utilizado: alv
-Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
-Método de selección: Torneos, escojiendo el de mejor fitness
-No. Generaciones: 0
-Mejor solucion: 0
-------------------------------
-Fecha de ejecución: 2020-02-29
-Hora de ejecución: 17:46:08.111632
-Nombre del documento de datos utilizado: alv
-Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
-Método de selección: Torneos, escojiendo el de mejor fitness
-No. Generaciones: 0
-Mejor solucion: 0
-------------------------------
-Fecha de ejecución: 2020-02-29
-Hora de ejecución: 17:54:51.749504
-Nombre del documento de datos utilizado: alv
-Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
-Método de selección: Torneos, escojiendo el de mejor fitness
-No. Generaciones: 0
-Mejor solucion: 0
-------------------------------
-Fecha de ejecución: 2020-02-29
-Hora de ejecución: 17:56:48.268264
-Nombre del documento de datos utilizado: alv
+Hora de ejecución: 18:10:47.812848
+Nombre del documento de datos utilizado: MC2A.csv
 Criterio de finalización utilizado: El mejor fitness de la poblacion-- 700
 Método de selección: Torneos, escojiendo el de mejor fitness
 No. Generaciones: 0

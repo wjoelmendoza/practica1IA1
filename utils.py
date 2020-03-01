@@ -1,4 +1,5 @@
 import datetime
+import pandas as pd
 #Aqui tendria que ir la logica del codigo genetico
 _nombreDoc = ''
 _criterioFinalizacion = ''
@@ -17,6 +18,11 @@ def init(nombre,criterio,valcriterio,metodo):
     _mejorSolucion = 0
     print('Inicializacion-----')
     
+def load_file():
+    global _nombreDoc
+    #data = pd.read_csv(_nombreDoc) 
+    #print(data.head())
+    return pd.read_csv(_nombreDoc)
 
 def escribir_en_bitacora():
     global _nombreDoc,_criterioFinalizacion,_valFinalizacion,_metodoSeleccion,_generaciones,_mejorSolucion 

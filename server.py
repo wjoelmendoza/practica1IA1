@@ -21,7 +21,8 @@ def analizar():
     valCriterioFinalizacion = params['valcriterio2'] if params['criterio'] == '2'else valCriterioFinalizacion
     valCriterioFinalizacion = params['valcriterio3'] if params['criterio'] == '3'else valCriterioFinalizacion 
     
-    init('alv',params['criterio'],valCriterioFinalizacion,params['criteriop'])
+    init(f.filename,params['criterio'],valCriterioFinalizacion,params['criteriop'])
+    load_file()
     escribir_en_bitacora()
     print("-----------------")
     return "OK"
