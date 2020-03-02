@@ -1,9 +1,9 @@
-from random import randint, random
+from random import randint, random, uniform
 
 def poblacion_inicial():
     p_ini = []
-    for x in range(6):
-        i = randint(0, 1)
+    for x in range(3):
+        i = uniform(-1, 1)
         p_ini.append(i)
 
     return p_ini
@@ -22,18 +22,18 @@ def evaluar(vec):
 
     return f
 
-def poblacion():
-    solucion = []
-    for i in range(10):
+def poblacion(n):
+    pob = []
+    for i in range(n):
         v = poblacion_inicial()
-        solucion.append(v)
+        pob.append(v)
 
-    return solucion
+    return pob
 
 def takeSecond(elem):
     return elem[1]
 
-def seleccionar(m_pob):
+def seleccionar(m_pob, t_selec):
         v_calidad = []
         select = []
 
@@ -50,6 +50,70 @@ def seleccionar(m_pob):
             select.append(v)
 
         return select
+
+def s_aleatorios(m_pob):
+    t = len(m_pob)
+    s = []
+    m = t // 2
+    print(m)
+    for l in range(m):
+        i = randint(0, t - 1)
+        s.append(m_pob[i])
+
+    return s
+
+def s_torneo(m_pob):
+    t = len(m_pob)
+
+    if t < 16:
+        return s_mejores(m_pob)
+
+    limite = t // 4
+    lim = limite;
+    i = 0
+    selec = []
+
+    while i < 4:
+        x = 0
+        v = []
+
+        while x < lim:
+            v.append(m_pob[x])
+
+        x += 1
+        lim += limite
+
+        s = s_mejores(v)
+
+        selec = selec + s
+
+        if lim > t:
+            break
+
+    return selec
+
+def s_mejores(m_pob):
+    v_calidad = []
+    select = []
+    t = len(m_pob)
+
+    for i in range(t):
+        act = m_pob[i]
+        c = evaluar(act)
+        v_calidad.append((i,c))
+
+        v_calidad.sort(reverse=False, key=takeSecond)
+
+    m = t // 2
+    for i in range(m):
+        act = v_calidad[i]
+        v = m_pob[act[0]]
+        select.append(v)
+
+        return select
+
+v = s_aleatorios([1, 2, 3, 4, 5, 6, 7, 8])
+print(v)
 
 def emparejar(padres):
     hijos = []
@@ -75,13 +139,20 @@ def emparejar(padres):
 def cruzar(v1, v2):
     vn = []
 
-    vn.append(v1[0])
-    vn.append(v1[1])
-    vn.append(v1[2])
+    if random() > .5:
+        vn.append(v1[0])
+    else:
+        vn.append(v2[0])
 
-    vn.append(v2[3])
-    vn.append(v2[4])
-    vn.append(v2[5])
+    if random() > .5:
+        vn.append(v1[1])
+    else:
+        vn.append(v2[1])
+
+    if random() > .5:
+        vn.append(v1[2])
+    else:
+        vn.append(v2[2])
 
     return vn
 
@@ -90,7 +161,7 @@ def mutar(hijo):
     for i in range(6):
         prob = random()
         if(prob > 0.5):
-            hijo[i] = randint(0,1)
+            hijo[i] = uniform(-1,1)
 
     return hijo
 
