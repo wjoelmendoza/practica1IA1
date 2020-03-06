@@ -1,6 +1,6 @@
 #!/bin/python3
 from flask import Flask, request, url_for, render_template
-from utils import *
+from algoritmo import main
 app = Flask(__name__)
 
 @app.route('/')

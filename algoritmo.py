@@ -1,4 +1,13 @@
 from random import randint, random, uniform
+from utils import *
+#VARIABLES GLOBALES
+_generacion = 0
+_numpoblacion = 10
+_numseleccionados
+_maximas_generaciones = 50
+_mejor_fitness = 80
+__promedio_fitness = 61
+#CALCULO DE fitness:
 
 def poblacion_inicial():
     p_ini = []
@@ -114,25 +123,24 @@ def s_mejores(m_pob):
 
 v = s_aleatorios([1, 2, 3, 4, 5, 6, 7, 8])
 print(v)
-
+#EMPAREJAMIENTO ALEATORIO...
 def emparejar(padres):
+    global _numpoblacion
     hijos = []
+    tampadres = len(padres)
+    for i in range(_numpoblacion - tampadres:
+        index1 = randint(0,tampadres)
+        index2 = randint(0,tampadres)
+        while(index1 == index2):
+            index2 = randint(0,tampadres)
 
-    h1 = cruzar(padres[0], padres[1])
-    hijos.append(h1)
-    h1 = cruzar(padres[3], padres[1])
-    hijos.append(h1)
-    h1 = cruzar(padres[0], padres[3])
-    hijos.append(h1)
-    h1 = cruzar(padres[4], padres[2])
-    hijos.append(h1)
-    h1 = cruzar(padres[2], padres[0])
-    hijos.append(h1)
-
-    for i in range(5):
-        h = hijos[i]
-        h = mutar(h)
-        padres.append(h)
+        h1 = cruzar(padres[index1], padres[index2])
+        h1 = mutar(h1)
+        hijos.append(h1)
+        
+    
+    for hijo in hijos:
+        padres.append(hijo)
 
     return padres
 
@@ -165,25 +173,61 @@ def mutar(hijo):
 
     return hijo
 
-def criterio(vec):
-    for i in vec:
-        calidad = evaluar(i)
-        if calidad >= -0.05 and calidad <= 0.05:
-            return i
+#METODO PARA EL CRITERIO DE FINALIZACION:
+#1.maximo numero de generaciones(O no)
+#2.el fitness promedio
+#3.el mejor fitness de la poblacion
 
-    return None
+def criterio(flag,lst):
+    if flag == '1':
+        return criterio1(_maximas_generaciones)
+    elif flag == '2':
+        return criterio2(lst)
+    else:
+        return criterio3(lst)
 
-def main():
-    generacion = 0
-    p0 = poblacion()
+def criterio3(lst):
+    valbest = 77
+    if valbest in lst:
+        return True
+    else:
+        return None
+
+def Average(lst): 
+    return sum(lst) / len(lst)
+
+def criterio2(lst):
+    valpromedio = 61
+    if Average(lst) >= valpromedio :
+        return True
+    else:
+        return None
+
+def criterio1(max):
+    global _generacion
+    if max == _generacion:
+        return True
+    else:
+        return None
+
+
+
+
+
+def main(flag_finalizacion,flag_seleccion,file_name):
+    global _generacion
+    global _numpoblacion
+    _generacion = 0
+    
+    p0 = poblacion(_numpoblacion)
     print(p0)
-    fin = criterio(p0)
+    fin = criterio(flag_finalizacion,p0)
     while(fin == None):
-        padres = seleccionar(p0)
+        padres = seleccionar(p0,flag_seleccion)
         p0 = emparejar(padres)
-        fin = criterio(p0)
-        generacion += 1
+        fin = criterio(flag_finalizacion,p0)
+        _generacion += 1
 
     print(fin)
-    print(generacion)
+    print(_generacion)
 
