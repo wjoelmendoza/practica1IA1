@@ -26,7 +26,7 @@ def load_file(file):
         dtype= {'P1':'float64','P2':'float64','P3':'float64','NF':'float64'}
         )
 def get_fitness(file,ls):
-    print("Entre a get_fitness().........")
+    #print("Entre a get_fitness().........")
     df = load_file(file)
     #print(df.head())
     #print(df.index)
@@ -42,7 +42,7 @@ def get_fitness(file,ls):
     #print(df.shape[0])
     fit = df['E'].sum()/df.shape[0]
     fit = round(fit,2)
-    print('FITNES CALCULADO::',fit)
+    #print('FITNES CALCULADO::',fit)
     return fit
 
 def escribir_en_bitacora(flagcriterio,seleccion,file,generaciones,solucion):

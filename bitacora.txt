@@ -1,32 +1,88 @@
 Fecha de ejecución: 2020-03-07
-Hora de ejecución: 02:10:51.478955
-Nombre del documento de datos utilizado: MC2A.csv
-Criterio de finalización utilizado: Maximo numero de Generaciones-- 1
-Método de selección: Los mejores padres(mejor fitness)
-No. Generaciones: 51
-Mejor solucion: ([0.184, 0.243, 0.6176732971258891], 76.79)
-------------------------------
-Fecha de ejecución: 2020-03-07
-Hora de ejecución: 02:12:50.871896
-Nombre del documento de datos utilizado: MC2A.csv
-Criterio de finalización utilizado: Maximo numero de Generaciones-- 1
-Método de selección: Torneos, escojiendo el de mejor fitness
-No. Generaciones: 51
-Mejor solucion: ([0.188, 0.225, 0.5706608731651179], 33.33)
-------------------------------
-Fecha de ejecución: 2020-03-07
-Hora de ejecución: 02:13:56.829077
+Hora de ejecución: 03:10:45.181233
 Nombre del documento de datos utilizado: MC2A.csv
 Criterio de finalización utilizado: Maximo numero de Generaciones-- 1
 Método de selección: Aleatorios
 No. Generaciones: 51
-Mejor solucion: ([0.081, 0.101, -0.076], 3169.76)
+Mejor solucion: ([0.051, 0.018, 0.219], 1809.0)
 ------------------------------
 Fecha de ejecución: 2020-03-07
-Hora de ejecución: 02:15:00.857282
+Hora de ejecución: 03:11:01.125356
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El mejor fitness de la poblacion-- 2
+Método de selección: Aleatorios
+No. Generaciones: 2
+Mejor solucion: ([0.5630577564319927, 0.111, 0.3258740865527159], 82.5)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:12:42.841697
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: Maximo numero de Generaciones-- 1
+Método de selección: Torneos, escojiendo el de mejor fitness
+No. Generaciones: 51
+Mejor solucion: ([0.048, 0.275, 0.6105200278290954], 32.36)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:13:23.019320
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El mejor fitness de la poblacion-- 2
+Método de selección: Torneos, escojiendo el de mejor fitness
+No. Generaciones: 4
+Mejor solucion: ([0.4598122062043628, 0.282, 0.197], 72.68)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:13:46.508732
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El fitness promedio de la poblacion-- 3
+Método de selección: Torneos, escojiendo el de mejor fitness
+No. Generaciones: 31
+Mejor solucion: ([0.4567896608742683, 0.281, 0.285], 42.35)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:14:28.824745
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: Maximo numero de Generaciones-- 1
+Método de selección: Los mejores padres(mejor fitness)
+No. Generaciones: 51
+Mejor solucion: ([0.078, 0.5866725269187401, 0.292], 37.07)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:21:39.335080
 Nombre del documento de datos utilizado: MC2A.csv
 Criterio de finalización utilizado: El mejor fitness de la poblacion-- 2
 Método de selección: Los mejores padres(mejor fitness)
-No. Generaciones: 2
-Mejor solucion: ([0.5882600611798383, 0.6754357244803149, -0.193], 213.46)
+No. Generaciones: 1
+Mejor solucion: ([0.3976908981328946, 0.10223243886636024, 0.31621732451156337], 171.95)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:22:34.635714
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El mejor fitness de la poblacion-- 2
+Método de selección: Los mejores padres(mejor fitness)
+No. Generaciones: 1
+Mejor solucion: ([0.07801041864650382, 0.559606797857042, 0.2701539218030675], 46.22)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:24:25.905511
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El fitness promedio de la poblacion-- 3
+Método de selección: Los mejores padres(mejor fitness)
+No. Generaciones: 27
+Mejor solucion: ([0.078, 0.134, 0.6982530157679068], 60.22)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:25:04.421377
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El fitness promedio de la poblacion-- 3
+Método de selección: Los mejores padres(mejor fitness)
+No. Generaciones: 48
+Mejor solucion: ([0.298, 0.36197177253109647, 0.291], 23.11)
+------------------------------
+Fecha de ejecución: 2020-03-07
+Hora de ejecución: 03:28:37.456603
+Nombre del documento de datos utilizado: MC2A.csv
+Criterio de finalización utilizado: El fitness promedio de la poblacion-- 3
+Método de selección: Los mejores padres(mejor fitness)
+No. Generaciones: 30
+Mejor solucion: ([0.48151713335547064, 0.248, 0.291], 48.3)
 ------------------------------

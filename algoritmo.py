@@ -17,7 +17,7 @@ def poblacion_inicial():
         p_ini.append(i)
 
     return p_ini
-
+'''
 def evaluar(vec):
     print("Entre a evaluar().........")
     signo = vec[0]
@@ -32,7 +32,7 @@ def evaluar(vec):
     f = abs(val**2 + 4 * val - 192)
 
     return f
-
+'''
 def poblacion(n):
     print("Entre a poblacion().........")
     pob = []
@@ -43,7 +43,7 @@ def poblacion(n):
     return pob
 
 def takeSecond(elem):
-    print("Entre a takeSecond().........")
+    #print("Entre a takeSecond().........")
     return elem[1]
 
 def seleccionar(m_pob, t_selec,filename):
@@ -120,10 +120,10 @@ def s_mejores(m_pob,filename):
     select = []
     print("Entre a s_mejores().........")
     v_calidad = get_fitness_poblacion(m_pob,filename)
-    print("Vector de calidad:",v_calidad)
+    #print("Vector de calidad:",v_calidad)
     #v_calidad = mejor_solucion(lfits)
     v_calidad.sort(reverse=False, key=takeSecond)
-    print("(2)Vector de calidad:",v_calidad)
+    #print("(2)Vector de calidad:",v_calidad)
     t = len(m_pob)
     '''
     for i in range(t):
@@ -153,7 +153,7 @@ def emparejar(padres):
     for i in range(_numpoblacion - tampadres):
         index1 = randint(0,tampadres-1)
         index2 = randint(0,tampadres-1)
-        print("alv: ",index1,index2)
+        #print("alv: ",index1,index2)
         while(index1 == index2):
             
             index2 = randint(0,tampadres-1)
@@ -169,7 +169,7 @@ def emparejar(padres):
     return padres
 
 def cruzar(v1, v2):
-    print("Entre a cruzar().........")
+    #print("Entre a cruzar().........")
     vn = []
 
     if random() > .5:
@@ -190,7 +190,7 @@ def cruzar(v1, v2):
     return vn
 
 def mutar(hijo):
-    print("Entre a mutar().........")
+    #print("Entre a mutar().........")
     pos = randint(0,2)
     valrand = uniform(-0.3,0.3)
     valrand = round(valrand,3)
@@ -221,18 +221,21 @@ def get_fitness_poblacion(lst,filedata):
 def mejor_solucion(lfits):
     print("Entro a mejor_solucion()")
     #print(lfits)
+    best = lfits[0]
     valbest = lfits[0][1]
     print(valbest)
     for v in lfits:
-        print(v)
-        print(v[0])
-        print(v[1])
+        #print(v)
+        #print(v[0])
+        #print(v[1])
         if v[1] < valbest:
+            best = v
             valbest = v[1]
-    return v
-def criterio3(lst,filename):
+    print(best)
+    return best
+def criterio2(lst,filename):
     print("Entre a criterio3().........")
-    contsbest = 1300
+    contsbest = 150
     lfits = get_fitness_poblacion(lst,filename)
     valbest = mejor_solucion(lfits)
     print("Mejor solucion encontrada: ",valbest)
@@ -248,10 +251,10 @@ def my_sum(lfits):
         sum+=item[1]
     return sum
 
-def criterio2(lst,filename):
+def criterio3(lst,filename):
     print("Entre a criterio2().........")
-    valpromedio = 3333
-    masmenos = 500
+    valpromedio = 150
+    masmenos = 75
     lfits = get_fitness_poblacion(lst,filename) 
     avg = my_sum(lfits) / len(lfits)
     print("Promedio: ",avg)
@@ -287,7 +290,7 @@ def main(flag_finalizacion,flag_seleccion,file_name):
     while(fin == None):
         padres = seleccionar(p0,flag_seleccion,file_name)
         p0 = emparejar(padres)
-        print("Termino de emparejar")
+        #print("Termino de emparejar")
         fin = criterio(flag_finalizacion,p0,file_name)
         _generacion += 1
 
