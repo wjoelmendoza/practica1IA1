@@ -16,13 +16,14 @@ def analizar():
     params = request.form
     #Vamos a inicializar con los datos del form las variables que usa el algortirmo(variables en utils.py)
     #Tenemos que seleccionar el valor segun el criterio de finalizacion seleccionado
-    valCriterioFinalizacion = params['valcriterio1'] if params['criterio'] == '1'else ''
-    valCriterioFinalizacion = params['valcriterio2'] if params['criterio'] == '2'else valCriterioFinalizacion
-    valCriterioFinalizacion = params['valcriterio3'] if params['criterio'] == '3'else valCriterioFinalizacion
-
-    init(f.filename,params['criterio'],valCriterioFinalizacion,params['criteriop'])
-    load_file()
-    escribir_en_bitacora()
+    #valCriterioFinalizacion = params['valcriterio1'] if params['criterio'] == '1'else ''
+    #valCriterioFinalizacion = params['valcriterio2'] if params['criterio'] == '2'else valCriterioFinalizacion
+    #valCriterioFinalizacion = params['valcriterio3'] if params['criterio'] == '3'else valCriterioFinalizacion
+    #def main(flag_finalizacion,flag_seleccion,file_name):
+    main(params['criterio'],params['criteriop'],f.filename)
+    #(f.filename,params['criterio'],valCriterioFinalizacion,params['criteriop'])
+    
+    
     print("-----------------")
     return "OK"
 

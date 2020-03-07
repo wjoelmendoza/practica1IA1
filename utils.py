@@ -22,10 +22,18 @@ def init(nombre,criterio,metodo):
 '''    
 def load_file(file):
     return pd.read_csv(
+<<<<<<< HEAD
         file,
         dtype= {'P1':'float64','P2':'float64','P3':'float64','NF':'float64'}
         )
 def get_fitness(file,ls):
+=======
+        './temporales/'+file,
+        dtype= {'P1':'float64','P2':'float64','P3':'float64','NF':'float64'}
+        )
+def get_fitness(file,ls):
+    print("Entre a get_fitness().........")
+>>>>>>> bj
     df = load_file(file)
     #print(df.head())
     #print(df.index)
@@ -37,7 +45,11 @@ def get_fitness(file,ls):
     df['NC'] = df['M1']+ df['M2'] + df['M3'] 
     df['E'] = (df['NF'] - df['NC'])**2
 
+<<<<<<< HEAD
     print(df.head())
+=======
+    #print(df.head())
+>>>>>>> bj
     #print(df.shape[0])
     fit = df['E'].sum()/df.shape[0]
     fit = round(fit,2)
@@ -45,8 +57,12 @@ def get_fitness(file,ls):
     return fit
 
 def escribir_en_bitacora(flagcriterio,seleccion,file,generaciones,solucion):
+<<<<<<< HEAD
     
+=======
+>>>>>>> bj
     
+    print("Entre a escribir_en_bitacora().........")
     f = open("bitacora.txt", "a")
     tiempo = datetime.datetime.now()
     strfinalizacion = 'Maximo numero de Generaciones-- '+str(flagcriterio) if flagcriterio == '1' else 'default'
