@@ -17,22 +17,6 @@ def poblacion_inicial():
         p_ini.append(i)
 
     return p_ini
-'''
-def evaluar(vec):
-    print("Entre a evaluar().........")
-    signo = vec[0]
-    val = vec[1]
-
-    for i in range(2,6):
-        val = val*2 + vec[i]
-
-    if signo:
-        val =  val * -1
-
-    f = abs(val**2 + 4 * val - 192)
-
-    return f
-'''
 def poblacion(n):
     print("Entre a poblacion().........")
     pob = []
@@ -51,21 +35,7 @@ def seleccionar(m_pob, t_selec,filename):
     print("seleccionar().........")
     #v_calidad = []
     #select = []
-    '''
-        for i in range(10):
-            act = m_pob[i]
-            c = evaluar(act)
-            v_calidad.append((i,c))
-
-        v_calidad.sort(reverse=False, key=takeSecond)
-
-        for i in range(5):
-            act = v_calidad[i]
-            v = m_pob[act[0]]
-            select.append(v)
-
-        return select
-    '''
+    
     if t_selec == '3':
         return s_aleatorios(m_pob)
     elif t_selec == '1':
@@ -235,7 +205,7 @@ def mejor_solucion(lfits):
     return best
 def criterio2(lst,filename):
     print("Entre a criterio3().........")
-    contsbest = 150
+    contsbest = 200
     lfits = get_fitness_poblacion(lst,filename)
     valbest = mejor_solucion(lfits)
     print("Mejor solucion encontrada: ",valbest)
@@ -254,7 +224,7 @@ def my_sum(lfits):
 def criterio3(lst,filename):
     print("Entre a criterio2().........")
     valpromedio = 150
-    masmenos = 75
+    masmenos = 150
     lfits = get_fitness_poblacion(lst,filename) 
     avg = my_sum(lfits) / len(lfits)
     print("Promedio: ",avg)
@@ -298,3 +268,4 @@ def main(flag_finalizacion,flag_seleccion,file_name):
     print(fin)
     print(_generacion)
     escribir_en_bitacora(flag_finalizacion,flag_seleccion,file_name,_generacion,fin)
+    return fin

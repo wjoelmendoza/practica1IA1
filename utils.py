@@ -45,6 +45,9 @@ def get_fitness(file,ls):
     #print('FITNES CALCULADO::',fit)
     return fit
 
+
+
+
 def escribir_en_bitacora(flagcriterio,seleccion,file,generaciones,solucion):
     
     print("Entre a escribir_en_bitacora().........")
